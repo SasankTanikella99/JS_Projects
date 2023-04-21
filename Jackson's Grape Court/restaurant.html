@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson's Grape Court</title>
+    <link rel="stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type = "text/css" href = "restaurant.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <a href = "#" class = "logo"><img src = "logo.png"></a>
+        <nav class = "navbar">
+            <a href = "#home" class = "active">home</a>
+            <a href = "#about">about</a>
+            <a href = "#menu">menu</a>
+            <a href = "#reservation">reservation</a>
+            <a href = "#blog">blog</a>
+        </nav>
+
+        <div class="icons">
+            <i class = "fas fa-bars" id = "menu"></i>
+            <i class = "fas fa-search"></i>
+            <i class = "fas fa-heart"></i>
+            <i class = "fas fa-shopping-cart"></i>
+        </div>
+    </header>
+
+    <!--slider-->
+    <div class="home" id = "home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide slide1">
+                    <div class="content">
+                        <img src="food1.png">
+
+                        <h3>delicious grape court</h3>
+                        <h1> gift hamper</h1>
+                        <p>
+                            Hamper give away!!!!
+                        </p>
+                        <a href="#" class="btn"> order now!</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide slide2">
+                    <div class="content">
+                        <img src="food1.png">
+
+                        <h3> with limited discounts</h3>
+                        <h1>  Fresh </h1>
+                        <p>
+                            Multicuisine!!!!
+                        </p>
+                        <a href="#" class="btn"> order now!</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide slide3">
+                    <div class="content">
+                        <img src="food1.png">
+
+                        <h3>we are open</h3>
+                        <h1> in-house bar</h1>
+                        <p>
+                            Lovin it!!!!
+                        </p>
+                        <a href="#" class="btn"> order now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    
+      <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".home-slider", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        loop: true
+        });
+    </script>
+    <script src="restaurant.js"></script>
+</body>
+</html>
