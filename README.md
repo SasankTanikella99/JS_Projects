@@ -1,3 +1,3 @@
 # JS_Projects
 
-Just adding some simple HTML CSS Javascript projects 
+Just simple HTML CSS Javascript projects 
