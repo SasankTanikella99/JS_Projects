@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-color: darkorchid;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.form{
+    background-color: brown;
+    padding: 20px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    margin: 100px;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    border: solid 4px black;
+    color: rgb(3, 45, 107);
+}
+
+.input::placeholder{
+    color: antiquewhite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.btn{
+    background-color: darkcyan;
+    
+    color: darkred;
+    border: none;
+    width: 40%;
+    
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.btn:hover{
+    filter: brightness(0.8);
+}
+.score{
+    color: chocolate;
+    text-align: right;
+}
