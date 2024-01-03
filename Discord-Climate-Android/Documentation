@@ -1,0 +1,39 @@
+[ 
+    You’ll apply your Node.js skills to build a backend application that integrates with two sets of professionally built APIs: the Discord APIs and the Weather API. We’ll cover Node.js best practices, how to work with APIs (including both REST and WebSockets) and we’ll even touch on one or two security related topics. Tools:: Node.js, Discord.js, Weather API, axios 
+] 
+[ 
+    commands::: [npm init -y] - accepting all default options, all modules will be installed (package.json) 
+    [npm install discord.js] - install discord.js 
+    [npm install dotenv]
+] 
+(( 
+    discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily. It takes a much more object-oriented approach than most other JS Discord libraries, making your bot's code significantly tidier and easier to comprehend.
+    
+ )) 
+ { 
+    add a script- "start" in package.json file create a src folder and create an index.js file go to discord.com/developers/applications and create an application open discord application and create a new server In the discord developer portal - OAuth2 Use Discord as an authorization system or use our API on behalf of your users. Add a redirect URI, pick your scopes, roll a D20 for good luck, and go!
+    - OAuth2 URL Generator Generate an invite link for your application by picking the scopes and permissions it needs to function. Then, share the URL to others! 
+    - use the URL and join with your discord server Log in with your Bot. 
+    - generate a new token in the developer portal and copy the token and pass it in the login function in the Client object, it should be populated with intents. It should be an empty array with guild. install dotenv so that unsharable files and things will be saved in env file 
+
+    - Define the command and it's functionality and write the command handler..
+        and register the commands in Discord. (Registering means Discord Server is aware of our command and when the command is triggered by the user, it notifies the bot to interact)
+        Command Handler and REgistering commands are done once. 
+
+        Registering commands is making an API call to the Discord Server.
+        This is done with the help of Discord REST Api.
+            -{
+
+            The provided code is a segment of a Discord bot implemented using the Discord.js library. The dependencies include the REST and Routes classes from the 'discord.js' library, essential for making HTTP requests to the Discord API. The Discord bot token is retrieved from the environment variable DISCORD_TOKEN, and an instance of the REST class is initialized with API version '10', configured with the bot token.
+
+            The primary function in the code is ClientReadyHandler, an asynchronous function that handles the bot's "ready" event. Upon successful login, it logs a message to the console indicating the bot's tag (username and discriminator).
+
+            Within a try-catch block, the code attempts to refresh the bot's slash commands, used in Discord slash commands. If successful, it logs the number of commands that have been refreshed. The refreshing process involves using the REST.put method to update guild commands. The method takes the client's CLIENT_ID and GUILD_ID from environment variables and sends a request to the Discord API with an array of command data obtained by mapping over the commands and converting them to JSON.
+
+            The success or failure of the command refreshing is logged to the console. In case of an error, the catch block catches and logs the error. The ClientReadyHandler function is then exported as part of a module, making it available for use in other parts of the application.
+            }
+
+    {
+        Executing Slash commands
+    }
+}
